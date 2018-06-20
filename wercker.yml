@@ -55,8 +55,7 @@ deploy-app:
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
         ports: "3000"
-        repository:: quay.io/moos3/checkip
-        registry: https://quay.io
+        repository: quay.io/ravi_r_singhal/checkip
       # ship to docker
       - internal/docker-scratch-push:
         username: $DOCKER_USERNAME
@@ -64,5 +63,4 @@ deploy-app:
         cmd: ./app
         tag: $WERCKER_GIT_COMMIT
         ports: "3000"
-        repository:: moos3/checkip
-        registry: https://hub.docker.com
+        repository: moos3/checkip
